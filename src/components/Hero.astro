@@ -1,99 +1,102 @@
 ---
 ---
-<section class="relative pt-28 sm:pt-36 pb-0 px-4 sm:px-6 lg:px-8 overflow-hidden">
+<section class="relative pt-28 sm:pt-36 pb-20 px-5 sm:px-8">
 
-  <!-- Radial glow from top -->
-  <div class="pointer-events-none absolute inset-0 flex items-start justify-center" aria-hidden="true">
-    <div class="w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_top,rgba(34,197,94,0.07)_0%,transparent_70%)]"></div>
-  </div>
-
-  <!-- Dot grid -->
+  <!-- Very subtle dot grid -->
   <div
-    class="pointer-events-none absolute inset-0 opacity-[0.3]"
+    class="pointer-events-none absolute inset-0 opacity-[0.18]"
     aria-hidden="true"
-    style="background-image: radial-gradient(#2a2a2a 1px, transparent 1px); background-size: 28px 28px;"
+    style="background-image: radial-gradient(#2a2a2a 1px, transparent 1px); background-size: 32px 32px;"
   ></div>
 
-  <div class="relative max-w-5xl mx-auto text-center">
+  <div class="relative max-w-5xl mx-auto">
 
-    <!-- Eyebrow pill -->
-    <div data-animate class="mb-6 flex justify-center">
-      <span class="inline-flex items-center gap-2 px-3 py-1 bg-[#111] border border-[#22c55e]/25 rounded-full text-xs font-medium text-[#22c55e] tracking-wide">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse-slow" aria-hidden="true"></span>
+    <!-- Text block — left-aligned, constrained width -->
+    <div class="max-w-3xl">
+
+      <!-- Eyebrow -->
+      <p data-animate class="text-sm text-[#525252] mb-7">
         Now in early access
-      </span>
-    </div>
+      </p>
 
-    <!-- H1 -->
-    <h1
-      data-animate
-      data-delay="100"
-      class="text-4xl sm:text-5xl lg:text-[3.75rem] font-bold text-white leading-[1.12] tracking-tight"
-    >
-      The job tracker that actually<br class="hidden sm:block" />
-      <span class="text-[#22c55e]">understands your stack</span>
-    </h1>
-
-    <!-- Subline -->
-    <p
-      data-animate
-      data-delay="200"
-      class="mt-6 text-base sm:text-lg text-[#a3a3a3] leading-relaxed max-w-2xl mx-auto"
-    >
-      Paste a job description. Claude extracts the stack, salary, seniority, and remote policy in under&nbsp;2&nbsp;seconds.
-      Track your pipeline. Never lose a follow-up again.
-    </p>
-
-    <!-- Founder note -->
-    <p
-      data-animate
-      data-delay="300"
-      class="mt-4 text-sm text-[#4a4a4a] italic"
-    >
-      Built after spending 3 weeks job hunting and losing my mind tailoring the same resume 40 times.
-    </p>
-
-    <!-- CTAs -->
-    <div
-      data-animate
-      data-delay="400"
-      class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3"
-    >
-      <a
-        href="#"
-        class="w-full sm:w-auto px-6 py-3 bg-[#22c55e] hover:bg-[#16a34a] text-black text-sm font-semibold rounded-lg transition-colors duration-150 inline-flex items-center justify-center gap-2"
+      <!-- H1 -->
+      <h1
+        data-animate
+        data-delay="100"
+        class="font-serif text-5xl sm:text-6xl lg:text-[4.5rem] text-[#F5F0E8] leading-[1.07] tracking-tight"
       >
-        Get started free
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </a>
-      <a
-        href="#how-it-works"
-        class="w-full sm:w-auto px-6 py-3 border border-[#2a2a2a] hover:border-[#444] text-[#a3a3a3] hover:text-[#e5e5e5] text-sm font-medium rounded-lg transition-colors duration-150 inline-flex items-center justify-center gap-2"
+        The job tracker that actually<br/>
+        understands your stack
+      </h1>
+
+      <!-- Subline -->
+      <p
+        data-animate
+        data-delay="200"
+        class="mt-6 text-base sm:text-lg text-[#737373] leading-relaxed max-w-lg"
       >
-        See how it works
-      </a>
+        Paste a job description. It extracts the stack, salary, seniority, and remote policy in under&nbsp;2&nbsp;seconds.
+        Track your pipeline. Never lose a follow-up again.
+      </p>
+
+      <!-- Founder note -->
+      <p
+        data-animate
+        data-delay="300"
+        class="mt-4 text-sm text-[#3a3a3a] italic"
+      >
+        Built after spending 3 weeks job hunting and losing my mind tailoring the same resume 40 times.
+      </p>
+
+      <!-- CTAs -->
+      <div
+        data-animate
+        data-delay="400"
+        class="mt-8 flex flex-col sm:flex-row items-start gap-3"
+      >
+        <a
+          href="#"
+          class="w-full sm:w-auto px-6 py-3 bg-[#F5F0E8] hover:bg-white text-[#0f0f0f] text-sm font-medium rounded-md transition-colors duration-150 inline-flex items-center justify-center gap-2"
+        >
+          Get started free
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a
+          href="#how-it-works"
+          class="w-full sm:w-auto px-6 py-3 border border-[#262626] hover:border-[#383838] text-[#737373] hover:text-[#9a9a9a] text-sm font-medium rounded-md transition-colors duration-150 inline-flex items-center justify-center"
+        >
+          See how it works
+        </a>
+      </div>
+
+      <!-- Reassurance line -->
+      <p
+        data-animate
+        data-delay="500"
+        class="mt-5 text-xs text-[#383838] italic"
+      >
+        No intake form. No onboarding call. Just paste a job description.
+      </p>
+
     </div>
 
     <!-- Dashboard image -->
     <div
       data-animate
-      data-delay="500"
-      class="mt-14 relative"
+      data-delay="300"
+      class="mt-16 relative"
     >
-      <!-- Glow under image -->
-      <div class="pointer-events-none absolute -inset-px rounded-xl bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.08)_0%,transparent_70%)] blur-xl" aria-hidden="true"></div>
-
-      <div class="relative rounded-xl border border-[#1f1f1f] overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_40px_80px_rgba(0,0,0,0.6)]">
-        <!-- Toolbar bar to sell the UI feel -->
+      <div class="relative rounded-lg border border-[#1f1f1f] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.5)]">
+        <!-- Fake browser chrome -->
         <div class="flex items-center gap-1.5 px-4 py-3 bg-[#0d0d0d] border-b border-[#1a1a1a]">
-          <div class="w-2.5 h-2.5 rounded-full bg-[#333]"></div>
-          <div class="w-2.5 h-2.5 rounded-full bg-[#333]"></div>
-          <div class="w-2.5 h-2.5 rounded-full bg-[#333]"></div>
-          <div class="ml-3 flex-1 h-5 bg-[#151515] rounded border border-[#222] max-w-xs"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]"></div>
+          <div class="ml-3 h-5 bg-[#141414] rounded border border-[#1f1f1f] w-48 sm:w-64"></div>
         </div>
-        <!-- Actual screenshot slot -->
+        <!-- Screenshot slot -->
         <div class="dashboard-placeholder aspect-[16/9] bg-[#0d0d0d]">
           <img
             src="/dashboard.png"
@@ -103,9 +106,8 @@
           />
         </div>
       </div>
-
-      <!-- Fade out at bottom so it blends into next section -->
-      <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" aria-hidden="true"></div>
+      <!-- Fade to background -->
+      <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#0f0f0f] to-transparent" aria-hidden="true"></div>
     </div>
 
   </div>

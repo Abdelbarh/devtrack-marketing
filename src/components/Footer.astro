@@ -1,47 +1,40 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-[#1a1a1a] py-12 px-4 sm:px-6 lg:px-8">
+<footer class="border-t border-[#1a1a1a] py-12 px-5 sm:px-8">
   <div class="max-w-5xl mx-auto">
 
     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
 
       <!-- Logo + tagline -->
       <div class="flex flex-col gap-2">
-        <a href="/" class="flex items-center gap-2.5 group w-fit">
-          <div class="w-6 h-6 bg-[#22c55e] rounded-md flex items-center justify-center font-bold text-black text-xs leading-none select-none">
+        <a href="/" class="flex items-center gap-2.5 w-fit group">
+          <div class="w-6 h-6 bg-[#C8A96E] rounded-md flex items-center justify-center font-bold text-[#0f0f0f] text-xs leading-none select-none">
             D
           </div>
-          <span class="font-semibold text-[#737373] text-sm tracking-tight group-hover:text-[#e5e5e5] transition-colors">DevTrack</span>
+          <span class="font-medium text-[#525252] text-sm group-hover:text-[#9a9a9a] transition-colors">DevTrack</span>
         </a>
-        <p class="text-xs text-[#3a3a3a]">Built by a developer, for developers.</p>
+        <p class="text-xs text-[#333]">Made because the job hunt is genuinely broken.</p>
       </div>
 
-      <!-- Nav links -->
+      <!-- Links -->
       <nav class="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer navigation">
-        <a href="#features" class="text-xs text-[#525252] hover:text-[#a3a3a3] transition-colors">Features</a>
-        <a href="#pricing" class="text-xs text-[#525252] hover:text-[#a3a3a3] transition-colors">Pricing</a>
-        <a
-          href="https://github.com/Abdelbarh/devtrack-marketing"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-xs text-[#525252] hover:text-[#a3a3a3] transition-colors"
-        >GitHub</a>
-        <a href="/privacy" class="text-xs text-[#525252] hover:text-[#a3a3a3] transition-colors">Privacy Policy</a>
-        <a href="/terms" class="text-xs text-[#525252] hover:text-[#a3a3a3] transition-colors">Terms of Service</a>
+        <a href="#features" class="text-xs text-[#383838] hover:text-[#525252] transition-colors">Features</a>
+        <a href="#pricing" class="text-xs text-[#383838] hover:text-[#525252] transition-colors">Pricing</a>
+        <a href="/privacy" class="text-xs text-[#383838] hover:text-[#525252] transition-colors">Privacy Policy</a>
+        <a href="/terms" class="text-xs text-[#383838] hover:text-[#525252] transition-colors">Terms of Service</a>
       </nav>
 
     </div>
 
     <div class="mt-10 pt-6 border-t border-[#141414] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
       <div class="flex flex-col gap-1">
-        <span class="text-xs text-[#3a3a3a]">© {year} DevTrack. All rights reserved.</span>
+        <span class="text-xs text-[#2e2e2e]">© {year} DevTrack. All rights reserved.</span>
         <a
           href="mailto:hello@devtrack.app"
-          class="text-xs text-[#3a3a3a] hover:text-[#525252] transition-colors w-fit"
+          class="text-xs text-[#2e2e2e] hover:text-[#3e3e3e] transition-colors w-fit"
         >hello@devtrack.app</a>
       </div>
-      <span class="text-xs text-[#2a2a2a]">Powered by Claude AI (Anthropic)</span>
     </div>
 
   </div>

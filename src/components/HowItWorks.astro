@@ -1,77 +1,68 @@
 ---
 const steps = [
   {
-    step: '01',
+    numeral: '1',
     title: 'Paste any job description',
     description: 'Raw text, copied straight from LinkedIn, Greenhouse, Lever — whatever. No formatting needed. Just paste and go.',
-    detail: '< 2 seconds to parse',
+    tag: '< 2 seconds to parse',
   },
   {
-    step: '02',
+    numeral: '2',
     title: 'Get your match score',
-    description: 'Claude reads the JD and your profile. You get a 0–100 fit score, the parsed tech stack, salary range, seniority level, and remote policy — structured, readable, saved.',
-    detail: '0–100 fit score',
+    description: 'It reads the JD and your profile. You get a 0–100 fit score, the parsed tech stack, salary range, seniority level, and remote policy — structured, readable, saved.',
+    tag: 'scored before you apply',
   },
   {
-    step: '03',
+    numeral: '3',
     title: 'Generate and apply',
     description: 'One click. Tailored resume + cover letter, specific to this JD and your actual GitHub projects. Export as PDF. Apply. Done.',
-    detail: 'PDF export ready',
+    tag: 'PDF export ready',
   },
 ];
 ---
-<section id="how-it-works" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-[#1a1a1a]">
+<section id="how-it-works" class="py-24 px-5 sm:px-8 border-t border-[#1a1a1a]">
   <div class="max-w-5xl mx-auto">
 
-    <!-- Section header -->
-    <div data-animate class="mb-4">
-      <span class="text-xs text-[#22c55e] font-medium uppercase tracking-widest font-mono">How it works</span>
-    </div>
+    <p data-animate class="text-sm text-[#525252] mb-5">how it works</p>
+
     <h2
       data-animate
       data-delay="100"
-      class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight"
+      class="font-serif text-3xl sm:text-4xl text-[#F5F0E8] leading-tight"
     >
       Three steps. That's it.
     </h2>
+
     <p
       data-animate
       data-delay="200"
-      class="mt-4 text-[#737373] max-w-lg"
+      class="mt-4 text-[#525252] max-w-sm text-sm"
     >
       No onboarding wizard. No 12-step setup. Paste a JD and you're running.
     </p>
 
-    <!-- Steps -->
-    <div class="mt-14 grid sm:grid-cols-3 gap-0 sm:gap-px relative">
+    <!-- Steps grid -->
+    <div
+      data-stagger
+      class="mt-14 grid sm:grid-cols-3 gap-px bg-[#1a1a1a] border border-[#1a1a1a] rounded-lg overflow-hidden"
+    >
+      {steps.map((s) => (
+        <div data-animate class="relative bg-[#0f0f0f] p-8 sm:p-10 overflow-hidden">
 
-      <!-- Connector line (desktop only) -->
-      <div class="pointer-events-none hidden sm:block absolute top-8 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px bg-[#1f1f1f]" aria-hidden="true"></div>
-
-      {steps.map((s, i) => (
-        <div
-          data-animate
-          data-delay={String(i * 150)}
-          class="relative flex flex-col gap-4 p-6 sm:p-8"
-        >
-          <!-- Step circle -->
-          <div class="relative z-10 flex items-center gap-3 sm:gap-0 sm:flex-col sm:items-start">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full border border-[#22c55e]/30 bg-[#0a0a0a] flex items-center justify-center">
-              <span class="font-mono text-xs font-semibold text-[#22c55e]">{s.step}</span>
-            </div>
-            <!-- Mobile connector (vertical) -->
-            {i < steps.length - 1 && (
-              <div class="sm:hidden h-full w-px bg-[#1a1a1a] absolute left-5 top-10 bottom-0" aria-hidden="true"></div>
-            )}
-          </div>
+          <!-- Large background numeral -->
+          <span
+            class="absolute top-2 right-4 font-serif text-[130px] leading-none text-[#F5F0E8] pointer-events-none select-none"
+            style="opacity: 0.04;"
+            aria-hidden="true"
+          >{s.numeral}</span>
 
           <!-- Content -->
-          <div class="sm:mt-2">
-            <h3 class="text-base font-semibold text-white leading-snug">{s.title}</h3>
-            <p class="mt-2 text-sm text-[#737373] leading-relaxed">{s.description}</p>
-            <div class="mt-4 inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#0f1a0f] border border-[#22c55e]/20 rounded text-xs font-mono text-[#22c55e]/80">
-              {s.detail}
-            </div>
+          <div class="relative">
+            <h3 class="text-base font-medium text-[#F5F0E8] leading-snug mb-3">{s.title}</h3>
+            <p class="text-sm text-[#525252] leading-relaxed mb-5">{s.description}</p>
+            <span class="inline-block px-2.5 py-1 border border-[#222] text-xs text-[#525252] rounded font-sans">
+              {s.tag}
+            </span>
           </div>
         </div>
       ))}

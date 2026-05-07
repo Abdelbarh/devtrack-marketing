@@ -4,17 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: '#22c55e',
-        'accent-dark': '#16a34a',
-        card: '#111111',
-        'card-border': '#1f1f1f',
+        accent: '#C8A96E',
+        cream: '#F5F0E8',
+        card: '#141414',
+        'card-border': '#222222',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
-      },
-      animation: {
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        sans: ['"IBM Plex Sans"', '-apple-system', 'system-ui', 'sans-serif'],
+        serif: ['"DM Serif Display"', 'Georgia', 'serif'],
       },
     },
   },

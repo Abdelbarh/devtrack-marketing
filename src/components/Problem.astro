@@ -1,59 +1,48 @@
 ---
 const problems = [
   {
-    number: '01',
     text: 'Every application takes 20–45 minutes of copy-pasting your resume into a slightly different format. Multiply that by 40 applications and you\'ve lost a full week of your life to Ctrl+C, Ctrl+V.',
   },
   {
-    number: '02',
     text: 'Huntr, Teal, Simplify — none of them know what FastAPI is. They can\'t tell a senior role from a mid-level one. They\'re built for everyone, which means they\'re built for no one.',
   },
   {
-    number: '03',
     text: 'You followed up, right? You\'re sure you did. Probably. Maybe. Two weeks ago you were excited about that role. Now you can\'t even find the email thread.',
   },
 ];
 ---
-<section class="py-24 px-4 sm:px-6 lg:px-8">
+<section class="py-24 px-5 sm:px-8 border-t border-[#1a1a1a]">
   <div class="max-w-5xl mx-auto">
 
-    <!-- Section header -->
-    <div data-animate class="mb-4">
-      <span class="text-xs text-[#22c55e] font-medium uppercase tracking-widest font-mono">The problem</span>
-    </div>
+    <p data-animate class="text-sm text-[#525252] mb-5">the problem</p>
+
     <h2
       data-animate
       data-delay="100"
-      class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight max-w-2xl"
+      class="font-serif text-3xl sm:text-4xl text-[#F5F0E8] leading-tight max-w-xl"
     >
       The job hunt is broken for developers
     </h2>
+
     <p
       data-animate
       data-delay="200"
-      class="mt-4 text-[#737373] max-w-xl"
+      class="mt-4 text-[#525252] max-w-sm text-sm"
     >
-      Generic job trackers treat you like any other applicant. You are not.
+      Generic tools treat you like any other applicant. You are not.
     </p>
 
-    <!-- Pain point cards -->
-    <div class="mt-12 grid gap-4 sm:gap-5">
-      {problems.map((p, i) => (
+    <!-- Editorial pain points -->
+    <div
+      data-stagger
+      class="mt-14 flex flex-col gap-10 max-w-2xl"
+    >
+      {problems.map((p) => (
         <div
           data-animate
-          data-delay={String(i * 100 + 100)}
-          class="group relative flex gap-5 sm:gap-8 p-6 bg-[#0f0f0f] border border-[#1a1a1a] rounded-xl hover:border-[#2a2a2a] transition-colors duration-300"
+          class="pl-6 border-l-[3px] border-[#C8A96E]/35"
         >
-          <!-- Number -->
-          <div class="flex-shrink-0">
-            <span class="font-mono text-xs text-[#333] font-medium select-none">{p.number}</span>
-          </div>
-          <!-- Quote-style text -->
-          <p class="text-[#a3a3a3] leading-relaxed text-sm sm:text-base">
-            {p.text}
-          </p>
-          <!-- Subtle left accent line on hover -->
-          <div class="absolute left-0 top-4 bottom-4 w-0.5 bg-[#22c55e]/0 group-hover:bg-[#22c55e]/40 rounded-full transition-all duration-300"></div>
+          <p class="text-[#737373] leading-[1.85] text-base sm:text-lg">{p.text}</p>
         </div>
       ))}
     </div>

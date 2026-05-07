@@ -1,74 +1,64 @@
 ---
 const features = [
   {
-    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
     title: 'JD Parsing',
     description: 'Paste any JD. Get company, title, stack, salary, seniority, and remote policy structured in under 2 seconds.',
   },
   {
-    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
     title: 'Match Scoring',
     description: 'See a 0–100 fit score against your profile and GitHub before you waste time applying to roles that don\'t fit.',
   },
   {
-    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>`,
     title: 'Resume Generation',
     description: 'One-click tailored resume per application. Exported as PDF. No more resume_v12_FINAL_real_final.pdf.',
   },
   {
-    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`,
     title: 'Cover Letter Generation',
     description: 'Tailored to the specific JD and your actual GitHub experience. Sounds like you wrote it, not a chatbot.',
   },
   {
-    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`,
     title: 'Pipeline Tracking',
     description: 'Saved → Applied → Screening → Interview → Offer. Every stage, every application, one view.',
   },
   {
-    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>`,
     title: 'Follow-up Reminders',
     description: 'Automated emails 7 days post-apply and 3 days post-interview. Because you will forget. Everyone does.',
   },
 ];
 ---
-<section id="features" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-[#1a1a1a]">
+<section id="features" class="py-24 px-5 sm:px-8 border-t border-[#1a1a1a]">
   <div class="max-w-5xl mx-auto">
 
-    <!-- Section header -->
-    <div data-animate class="mb-4">
-      <span class="text-xs text-[#22c55e] font-medium uppercase tracking-widest font-mono">Features</span>
-    </div>
+    <p data-animate class="text-sm text-[#525252] mb-5">features</p>
+
     <h2
       data-animate
       data-delay="100"
-      class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight max-w-2xl"
+      class="font-serif text-3xl sm:text-4xl text-[#F5F0E8] leading-tight"
     >
-      Everything you need. Nothing you don't.
+      Six things. Each one earned.
     </h2>
+
     <p
       data-animate
       data-delay="200"
-      class="mt-4 text-[#737373] max-w-xl"
+      class="mt-4 text-[#525252] max-w-sm text-sm"
     >
-      Six features built around the actual job hunt workflow — not the one some PM imagined.
+      Built around the actual job hunt workflow — not the one some PM imagined.
     </p>
 
-    <!-- Feature grid -->
+    <!-- Two-column feature list -->
     <div
       data-stagger
-      class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1a1a1a] rounded-xl overflow-hidden border border-[#1a1a1a]"
+      class="mt-12 divide-y divide-[#1a1a1a] border-t border-[#1a1a1a]"
     >
       {features.map((f) => (
         <div
           data-animate
-          class="group bg-[#0a0a0a] p-6 hover:bg-[#0d0d0d] transition-colors duration-200"
+          class="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-2 sm:gap-12 py-5 group"
         >
-          <div class="w-8 h-8 rounded-lg bg-[#0f1a0f] border border-[#22c55e]/15 flex items-center justify-center text-[#22c55e] mb-4 group-hover:border-[#22c55e]/30 transition-colors">
-            <Fragment set:html={f.icon} />
-          </div>
-          <h3 class="text-sm font-semibold text-white mb-1.5">{f.title}</h3>
-          <p class="text-sm text-[#737373] leading-relaxed">{f.description}</p>
+          <span class="text-sm font-medium text-[#F5F0E8]">{f.title}</span>
+          <span class="text-sm text-[#525252] leading-relaxed">{f.description}</span>
         </div>
       ))}
     </div>
