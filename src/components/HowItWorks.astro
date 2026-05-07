@@ -1,68 +1,72 @@
 ---
 const steps = [
   {
-    numeral: '1',
-    title: 'Paste any job description',
-    description: 'Raw text, copied straight from LinkedIn, Greenhouse, Lever — whatever. No formatting needed. Just paste and go.',
-    tag: '< 2 seconds to parse',
+    num: '01',
+    title: 'Paste a job description',
+    text: 'Drop in a job post from LinkedIn, company career pages, or any job board.',
+    detail: 'Any source works',
   },
   {
-    numeral: '2',
-    title: 'Get your match score',
-    description: 'It reads the JD and your profile. You get a 0–100 fit score, the parsed tech stack, salary range, seniority level, and remote policy — structured, readable, saved.',
-    tag: 'scored before you apply',
+    num: '02',
+    title: 'Review extracted insights',
+    text: 'DevTrack identifies role details, tech stack, seniority, location, salary, and fit signals.',
+    detail: 'Structured in seconds',
   },
   {
-    numeral: '3',
-    title: 'Generate and apply',
-    description: 'One click. Tailored resume + cover letter, specific to this JD and your actual GitHub projects. Export as PDF. Apply. Done.',
-    tag: 'PDF export ready',
+    num: '03',
+    title: 'Track and tailor',
+    text: 'Save the application, generate tailored materials, and move it through your pipeline.',
+    detail: 'One workflow, start to offer',
   },
 ];
 ---
-<section id="how-it-works" class="py-24 px-5 sm:px-8 border-t border-[#1a1a1a]">
-  <div class="max-w-5xl mx-auto">
+<section id="how-it-works" class="py-20 px-6 bg-[#0e0e11] border-y border-[#1e1e22]">
+  <div class="max-w-container mx-auto">
 
-    <p data-animate class="text-sm text-[#525252] mb-5">how it works</p>
+    <div class="text-center mb-12">
+      <div data-animate class="mb-3">
+        <span class="text-xs font-semibold text-[#a3e635] uppercase tracking-widest">How it works</span>
+      </div>
+      <h2
+        data-animate
+        data-delay="1"
+        class="text-3xl sm:text-[2.25rem] font-bold text-[#f0f0f0] leading-tight tracking-tight"
+      >
+        From job post to offer in three steps
+      </h2>
+      <p
+        data-animate
+        data-delay="2"
+        class="mt-4 text-[16px] text-[#a0a0a8] max-w-md mx-auto"
+      >
+        A repeatable workflow for every role you consider.
+      </p>
+    </div>
 
-    <h2
-      data-animate
-      data-delay="100"
-      class="font-serif text-3xl sm:text-4xl text-[#F5F0E8] leading-tight"
-    >
-      Three steps. That's it.
-    </h2>
+    <div class="grid sm:grid-cols-3 gap-5 relative">
 
-    <p
-      data-animate
-      data-delay="200"
-      class="mt-4 text-[#525252] max-w-sm text-sm"
-    >
-      No onboarding wizard. No 12-step setup. Paste a JD and you're running.
-    </p>
+      <!-- Connecting line (desktop) -->
+      <div class="hidden sm:block absolute top-8 left-[calc(16.67%+1.25rem)] right-[calc(16.67%+1.25rem)] h-px bg-[#26262b]" aria-hidden="true"></div>
 
-    <!-- Steps grid -->
-    <div
-      data-stagger
-      class="mt-14 grid sm:grid-cols-3 gap-px bg-[#1a1a1a] border border-[#1a1a1a] rounded-lg overflow-hidden"
-    >
-      {steps.map((s) => (
-        <div data-animate class="relative bg-[#0f0f0f] p-8 sm:p-10 overflow-hidden">
+      {steps.map((s, i) => (
+        <div
+          data-animate
+          data-delay={String(i)}
+          class="relative flex flex-col p-7 bg-[#131316] border border-[#26262b] rounded-xl"
+        >
+          <!-- Step number -->
+          <div class="relative z-10 w-10 h-10 rounded-full border border-[#26262b] bg-[#1a1a1e] flex items-center justify-center mb-5 flex-shrink-0">
+            <span class="text-xs font-bold text-[#a3e635] tabular-nums">{s.num}</span>
+          </div>
 
-          <!-- Large background numeral -->
-          <span
-            class="absolute top-2 right-4 font-serif text-[130px] leading-none text-[#F5F0E8] pointer-events-none select-none"
-            style="opacity: 0.04;"
-            aria-hidden="true"
-          >{s.numeral}</span>
+          <h3 class="text-base font-semibold text-[#f0f0f0] mb-2 leading-snug">{s.title}</h3>
+          <p class="text-sm text-[#a0a0a8] leading-relaxed flex-1">{s.text}</p>
 
-          <!-- Content -->
-          <div class="relative">
-            <h3 class="text-base font-medium text-[#F5F0E8] leading-snug mb-3">{s.title}</h3>
-            <p class="text-sm text-[#525252] leading-relaxed mb-5">{s.description}</p>
-            <span class="inline-block px-2.5 py-1 border border-[#222] text-xs text-[#525252] rounded font-sans">
-              {s.tag}
-            </span>
+          <div class="mt-5 flex items-center gap-2 text-xs text-[#5a5a64]">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            {s.detail}
           </div>
         </div>
       ))}

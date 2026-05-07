@@ -1,51 +1,50 @@
 ---
-const problems = [
-  {
-    text: 'Every application takes 20–45 minutes of copy-pasting your resume into a slightly different format. Multiply that by 40 applications and you\'ve lost a full week of your life to Ctrl+C, Ctrl+V.',
-  },
-  {
-    text: 'Huntr, Teal, Simplify — none of them know what FastAPI is. They can\'t tell a senior role from a mid-level one. They\'re built for everyone, which means they\'re built for no one.',
-  },
-  {
-    text: 'You followed up, right? You\'re sure you did. Probably. Maybe. Two weeks ago you were excited about that role. Now you can\'t even find the email thread.',
-  },
+const points = [
+  { label: 'Scattered job posts and notes', icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>` },
+  { label: 'Hard to compare roles objectively', icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>` },
+  { label: 'Follow-ups disappear after applying', icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>` },
 ];
 ---
-<section class="py-24 px-5 sm:px-8 border-t border-[#1a1a1a]">
-  <div class="max-w-5xl mx-auto">
+<section class="py-20 px-6">
+  <div class="max-w-container mx-auto">
+    <div class="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
 
-    <p data-animate class="text-sm text-[#525252] mb-5">the problem</p>
-
-    <h2
-      data-animate
-      data-delay="100"
-      class="font-serif text-3xl sm:text-4xl text-[#F5F0E8] leading-tight max-w-xl"
-    >
-      The job hunt is broken for developers
-    </h2>
-
-    <p
-      data-animate
-      data-delay="200"
-      class="mt-4 text-[#525252] max-w-sm text-sm"
-    >
-      Generic tools treat you like any other applicant. You are not.
-    </p>
-
-    <!-- Editorial pain points -->
-    <div
-      data-stagger
-      class="mt-14 flex flex-col gap-10 max-w-2xl"
-    >
-      {problems.map((p) => (
-        <div
-          data-animate
-          class="pl-6 border-l-[3px] border-[#C8A96E]/35"
-        >
-          <p class="text-[#737373] leading-[1.85] text-base sm:text-lg">{p.text}</p>
+      <!-- Left: Text -->
+      <div>
+        <div data-animate class="mb-3">
+          <span class="text-xs font-semibold text-[#a3e635] uppercase tracking-widest">The problem</span>
         </div>
-      ))}
-    </div>
+        <h2
+          data-animate
+          data-delay="1"
+          class="text-3xl sm:text-[2.25rem] font-bold text-[#f0f0f0] leading-tight tracking-tight"
+        >
+          Job hunting is messy when every application lives somewhere else.
+        </h2>
+        <p
+          data-animate
+          data-delay="2"
+          class="mt-5 text-[16px] text-[#a0a0a8] leading-relaxed"
+        >
+          Developers often track roles in spreadsheets, save job posts in browser tabs, rewrite the same documents, and forget when to follow up. DevTrack brings the workflow into one focused place.
+        </p>
+      </div>
 
+      <!-- Right: Problem points -->
+      <div data-animate data-delay="2" class="flex flex-col gap-3">
+        {points.map((p) => (
+          <div class="flex items-start gap-4 p-5 bg-[#131316] border border-[#26262b] rounded-xl hover:border-[#36363b] transition-colors duration-200">
+            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-[#1e1e22] border border-[#26262b] flex items-center justify-center">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-[#f0f0f0] leading-snug pt-0.5">{p.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
 </section>

@@ -1,114 +1,281 @@
 ---
 ---
-<section class="relative pt-28 sm:pt-36 pb-20 px-5 sm:px-8">
+<section class="relative pt-32 pb-16 px-6 overflow-hidden">
 
-  <!-- Very subtle dot grid -->
+  <!-- Subtle radial glow behind hero content -->
   <div
-    class="pointer-events-none absolute inset-0 opacity-[0.18]"
+    class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] opacity-30"
     aria-hidden="true"
-    style="background-image: radial-gradient(#2a2a2a 1px, transparent 1px); background-size: 32px 32px;"
+    style="background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(163,230,53,0.12) 0%, transparent 70%);"
   ></div>
 
-  <div class="relative max-w-5xl mx-auto">
+  <div class="max-w-container mx-auto">
+    <div class="grid lg:grid-cols-[1fr_1.15fr] gap-12 xl:gap-16 items-center">
 
-    <!-- Text block — left-aligned, constrained width -->
-    <div class="max-w-3xl">
+      <!-- Left: Copy -->
+      <div class="max-w-xl">
 
-      <!-- Eyebrow -->
-      <p data-animate class="text-sm text-[#525252] mb-7">
-        Now in early access
-      </p>
+        <!-- Eyebrow -->
+        <div data-animate class="mb-5">
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#131316] border border-[#26262b] rounded-full text-xs font-medium text-[#a0a0a8]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#a3e635]" aria-hidden="true"></span>
+            Developer job search toolkit
+          </span>
+        </div>
 
-      <!-- H1 -->
-      <h1
-        data-animate
-        data-delay="100"
-        class="font-serif text-5xl sm:text-6xl lg:text-[4.5rem] text-[#F5F0E8] leading-[1.07] tracking-tight"
-      >
-        The job tracker that actually<br/>
-        understands your stack
-      </h1>
-
-      <!-- Subline -->
-      <p
-        data-animate
-        data-delay="200"
-        class="mt-6 text-base sm:text-lg text-[#737373] leading-relaxed max-w-lg"
-      >
-        Paste a job description. It extracts the stack, salary, seniority, and remote policy in under&nbsp;2&nbsp;seconds.
-        Track your pipeline. Never lose a follow-up again.
-      </p>
-
-      <!-- Founder note -->
-      <p
-        data-animate
-        data-delay="300"
-        class="mt-4 text-sm text-[#3a3a3a] italic"
-      >
-        Built after spending 3 weeks job hunting and losing my mind tailoring the same resume 40 times.
-      </p>
-
-      <!-- CTAs -->
-      <div
-        data-animate
-        data-delay="400"
-        class="mt-8 flex flex-col sm:flex-row items-start gap-3"
-      >
-        <a
-          href="#"
-          class="w-full sm:w-auto px-6 py-3 bg-[#F5F0E8] hover:bg-white text-[#0f0f0f] text-sm font-medium rounded-md transition-colors duration-150 inline-flex items-center justify-center gap-2"
+        <!-- Headline -->
+        <h1
+          data-animate
+          data-delay="1"
+          class="text-[2.75rem] sm:text-[3.25rem] lg:text-[3.5rem] font-bold text-[#f0f0f0] leading-[1.1] tracking-tight"
         >
-          Get started free
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-        <a
-          href="#how-it-works"
-          class="w-full sm:w-auto px-6 py-3 border border-[#262626] hover:border-[#383838] text-[#737373] hover:text-[#9a9a9a] text-sm font-medium rounded-md transition-colors duration-150 inline-flex items-center justify-center"
+          Track every application.<br/>
+          <span class="text-[#a3e635]">Apply with more signal.</span>
+        </h1>
+
+        <!-- Supporting text -->
+        <p
+          data-animate
+          data-delay="2"
+          class="mt-5 text-[17px] text-[#a0a0a8] leading-[1.7] max-w-lg"
         >
-          See how it works
-        </a>
+          DevTrack helps developers organize their job search, understand each role faster,
+          tailor application materials, and stay on top of every follow-up — all in one workspace.
+        </p>
+
+        <!-- CTAs -->
+        <div
+          data-animate
+          data-delay="3"
+          class="mt-8 flex flex-col sm:flex-row items-start gap-3"
+        >
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#a3e635] hover:bg-[#8bcf2a] text-[#0c0c0e] font-semibold text-sm rounded-lg transition-colors duration-150 w-full sm:w-auto"
+          >
+            Start free
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a
+            href="#how-it-works"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#131316] hover:bg-[#1a1a1e] border border-[#26262b] hover:border-[#36363b] text-[#f0f0f0] text-sm font-medium rounded-lg transition-all duration-150 w-full sm:w-auto"
+          >
+            See how it works
+          </a>
+        </div>
+
+        <!-- Trust line -->
+        <p
+          data-animate
+          data-delay="4"
+          class="mt-5 text-sm text-[#5a5a64]"
+        >
+          Built for developers actively job hunting.
+        </p>
       </div>
 
-      <!-- Reassurance line -->
-      <p
-        data-animate
-        data-delay="500"
-        class="mt-5 text-xs text-[#383838] italic"
-      >
-        No intake form. No onboarding call. Just paste a job description.
-      </p>
+      <!-- Right: Product mockup -->
+      <div data-animate data-delay="2" class="relative hidden lg:block">
 
-    </div>
+        <!-- Floating glow under mockup -->
+        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-[#a3e635]/10 blur-2xl rounded-full pointer-events-none" aria-hidden="true"></div>
 
-    <!-- Dashboard image -->
-    <div
-      data-animate
-      data-delay="300"
-      class="mt-16 relative"
-    >
-      <div class="relative rounded-lg border border-[#1f1f1f] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.5)]">
-        <!-- Fake browser chrome -->
-        <div class="flex items-center gap-1.5 px-4 py-3 bg-[#0d0d0d] border-b border-[#1a1a1a]">
-          <div class="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]"></div>
-          <div class="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]"></div>
-          <div class="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]"></div>
-          <div class="ml-3 h-5 bg-[#141414] rounded border border-[#1f1f1f] w-48 sm:w-64"></div>
-        </div>
-        <!-- Screenshot slot -->
-        <div class="dashboard-placeholder aspect-[16/9] bg-[#0d0d0d]">
-          <img
-            src="/dashboard.png"
-            alt="DevTrack dashboard"
-            class="w-full h-full object-cover object-top"
-            loading="eager"
-          />
+        <!-- Mockup shell -->
+        <div class="relative rounded-xl border border-[#26262b] bg-[#0e0e11] overflow-hidden shadow-mockup">
+
+          <!-- Browser chrome -->
+          <div class="flex items-center gap-3 h-10 px-4 bg-[#0a0a0c] border-b border-[#1e1e22]">
+            <div class="flex gap-1.5">
+              <div class="w-2.5 h-2.5 rounded-full bg-[#3a3a3a]"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#3a3a3a]"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#3a3a3a]"></div>
+            </div>
+            <div class="ml-2 h-5 bg-[#131316] rounded border border-[#1e1e22] flex items-center px-2.5 flex-1 max-w-[240px]">
+              <span class="text-[10px] text-[#5a5a64] truncate">app.devtrack.io/applications</span>
+            </div>
+          </div>
+
+          <!-- App layout -->
+          <div class="flex" style="height: 390px;">
+
+            <!-- Sidebar -->
+            <div class="w-[148px] flex-shrink-0 bg-[#0a0a0c] border-r border-[#1e1e22] flex flex-col py-3">
+              <!-- Logo in sidebar -->
+              <div class="flex items-center gap-2 px-3 mb-5">
+                <div class="w-5 h-5 bg-[#a3e635] rounded-[5px] flex items-center justify-center flex-shrink-0">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0c0c0e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </div>
+                <span class="text-[11px] font-semibold text-[#f0f0f0] truncate">DevTrack</span>
+              </div>
+
+              <!-- Nav items -->
+              <div class="flex flex-col gap-0.5 px-2">
+                <div class="flex items-center gap-2 px-2 py-1.5 rounded-md text-[#5a5a64] text-[10px] cursor-pointer hover:bg-[#131316] hover:text-[#a0a0a8] transition-colors">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                  <span>Dashboard</span>
+                </div>
+                <div class="flex items-center gap-2 px-2 py-1.5 rounded-md bg-[#1a1a1e] text-[#f0f0f0] text-[10px] cursor-pointer">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span>Applications</span>
+                </div>
+                <div class="flex items-center gap-2 px-2 py-1.5 rounded-md text-[#5a5a64] text-[10px] cursor-pointer hover:bg-[#131316] hover:text-[#a0a0a8] transition-colors">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+                  <span>Documents</span>
+                </div>
+                <div class="flex items-center gap-2 px-2 py-1.5 rounded-md text-[#5a5a64] text-[10px] cursor-pointer hover:bg-[#131316] hover:text-[#a0a0a8] transition-colors">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                  <span>Reminders</span>
+                </div>
+              </div>
+
+              <!-- Bottom settings -->
+              <div class="mt-auto px-2">
+                <div class="flex items-center gap-2 px-2 py-1.5 rounded-md text-[#5a5a64] text-[10px] cursor-pointer hover:bg-[#131316] transition-colors">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                  <span>Settings</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="flex-1 overflow-hidden flex flex-col min-w-0">
+
+              <!-- Header bar -->
+              <div class="flex items-center justify-between px-4 py-3 border-b border-[#1e1e22] flex-shrink-0">
+                <span class="text-[11px] font-semibold text-[#f0f0f0]">Applications</span>
+                <button class="flex items-center gap-1 px-2.5 py-1 bg-[#a3e635] text-[#0c0c0e] text-[9px] font-bold rounded-md">
+                  <span>+</span> Add
+                </button>
+              </div>
+
+              <!-- Search + filters -->
+              <div class="flex items-center gap-2 px-4 py-2.5 border-b border-[#1e1e22] flex-shrink-0">
+                <div class="flex items-center gap-1.5 flex-1 bg-[#0a0a0c] border border-[#1e1e22] rounded-md px-2.5 py-1.5">
+                  <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#5a5a64" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                  <span class="text-[9px] text-[#3a3a44]">Search roles...</span>
+                </div>
+                <div class="flex gap-1.5">
+                  <span class="px-2 py-1 bg-[#1a1a1e] text-[#a0a0a8] text-[9px] rounded border border-[#26262b] cursor-pointer">All</span>
+                  <span class="px-2 py-1 bg-[#0e1a0e] text-[#a3e635] text-[9px] rounded border border-[#a3e635]/20 cursor-pointer">Active</span>
+                </div>
+              </div>
+
+              <!-- Table header -->
+              <div class="grid gap-3 px-4 py-2 border-b border-[#1e1e22] flex-shrink-0" style="grid-template-columns: 1fr 1fr 80px 44px;">
+                <span class="text-[9px] font-semibold text-[#5a5a64] uppercase tracking-wide">Company</span>
+                <span class="text-[9px] font-semibold text-[#5a5a64] uppercase tracking-wide">Role</span>
+                <span class="text-[9px] font-semibold text-[#5a5a64] uppercase tracking-wide">Status</span>
+                <span class="text-[9px] font-semibold text-[#5a5a64] uppercase tracking-wide">Score</span>
+              </div>
+
+              <!-- Table rows -->
+              <div class="flex-1 overflow-hidden divide-y divide-[#1a1a1a]">
+
+                <!-- Row 1: Stripe - Applied - 87 -->
+                <div class="grid gap-3 px-4 py-2.5 hover:bg-[#131316] transition-colors cursor-pointer" style="grid-template-columns: 1fr 1fr 80px 44px;">
+                  <div class="flex items-center gap-2 min-w-0">
+                    <div class="w-5 h-5 rounded bg-[#1e1e22] border border-[#26262b] flex items-center justify-center flex-shrink-0">
+                      <span class="text-[7px] font-bold text-[#818cf8]">S</span>
+                    </div>
+                    <span class="text-[10px] font-medium text-[#f0f0f0] truncate">Stripe</span>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] text-[#a0a0a8] truncate">Backend Engineer III</div>
+                    <div class="flex gap-1 mt-0.5">
+                      <span class="px-1 py-0.5 bg-[#0e1a0e] text-[#a3e635] text-[7px] rounded font-medium">Python</span>
+                      <span class="px-1 py-0.5 bg-[#1a1a2a] text-[#818cf8] text-[7px] rounded font-medium">FastAPI</span>
+                    </div>
+                  </div>
+                  <div><span class="px-2 py-0.5 bg-[#2a1e0e] text-[#f59e0b] text-[8px] rounded-full font-medium">Applied</span></div>
+                  <div class="text-[11px] font-bold text-[#a3e635]">87</div>
+                </div>
+
+                <!-- Row 2: Vercel - Saved - 72 -->
+                <div class="grid gap-3 px-4 py-2.5 hover:bg-[#131316] transition-colors cursor-pointer" style="grid-template-columns: 1fr 1fr 80px 44px;">
+                  <div class="flex items-center gap-2 min-w-0">
+                    <div class="w-5 h-5 rounded bg-[#1e1e22] border border-[#26262b] flex items-center justify-center flex-shrink-0">
+                      <span class="text-[7px] font-bold text-[#f0f0f0]">V</span>
+                    </div>
+                    <span class="text-[10px] font-medium text-[#f0f0f0] truncate">Vercel</span>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] text-[#a0a0a8] truncate">Full Stack Developer</div>
+                    <div class="flex gap-1 mt-0.5">
+                      <span class="px-1 py-0.5 bg-[#1a2a3a] text-[#38bdf8] text-[7px] rounded font-medium">React</span>
+                      <span class="px-1 py-0.5 bg-[#0a0a14] text-[#a0a0a8] text-[7px] rounded font-medium">Next.js</span>
+                    </div>
+                  </div>
+                  <div><span class="px-2 py-0.5 bg-[#1e1e22] text-[#a0a0a8] text-[8px] rounded-full font-medium">Saved</span></div>
+                  <div class="text-[11px] font-bold text-[#fbbf24]">72</div>
+                </div>
+
+                <!-- Row 3: Datadog - Screening - 91 -->
+                <div class="grid gap-3 px-4 py-2.5 hover:bg-[#131316] transition-colors cursor-pointer" style="grid-template-columns: 1fr 1fr 80px 44px;">
+                  <div class="flex items-center gap-2 min-w-0">
+                    <div class="w-5 h-5 rounded bg-[#1e1e22] border border-[#26262b] flex items-center justify-center flex-shrink-0">
+                      <span class="text-[7px] font-bold text-[#f97316]">D</span>
+                    </div>
+                    <span class="text-[10px] font-medium text-[#f0f0f0] truncate">Datadog</span>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] text-[#a0a0a8] truncate">Senior Software Engineer</div>
+                    <div class="flex gap-1 mt-0.5">
+                      <span class="px-1 py-0.5 bg-[#0e1a0e] text-[#a3e635] text-[7px] rounded font-medium">Go</span>
+                      <span class="px-1 py-0.5 bg-[#1a2a1e] text-[#34d399] text-[7px] rounded font-medium">PostgreSQL</span>
+                    </div>
+                  </div>
+                  <div><span class="px-2 py-0.5 bg-[#2a1a0e] text-[#f97316] text-[8px] rounded-full font-medium">Screening</span></div>
+                  <div class="text-[11px] font-bold text-[#a3e635]">91</div>
+                </div>
+
+                <!-- Row 4: Linear - Interview - 95 -->
+                <div class="grid gap-3 px-4 py-2.5 hover:bg-[#131316] transition-colors cursor-pointer bg-[#131316]" style="grid-template-columns: 1fr 1fr 80px 44px;">
+                  <div class="flex items-center gap-2 min-w-0">
+                    <div class="w-5 h-5 rounded bg-[#1e1e22] border border-[#26262b] flex items-center justify-center flex-shrink-0">
+                      <span class="text-[7px] font-bold text-[#818cf8]">L</span>
+                    </div>
+                    <span class="text-[10px] font-medium text-[#f0f0f0] truncate">Linear</span>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] text-[#a0a0a8] truncate">Backend Developer</div>
+                    <div class="flex gap-1 mt-0.5">
+                      <span class="px-1 py-0.5 bg-[#1a1a2a] text-[#818cf8] text-[7px] rounded font-medium">TypeScript</span>
+                      <span class="px-1 py-0.5 bg-[#1a2a1e] text-[#34d399] text-[7px] rounded font-medium">.NET</span>
+                    </div>
+                  </div>
+                  <div><span class="px-2 py-0.5 bg-[#1a1a2a] text-[#818cf8] text-[8px] rounded-full font-medium">Interview</span></div>
+                  <div class="text-[11px] font-bold text-[#a3e635]">95</div>
+                </div>
+
+                <!-- Row 5: Shopify - Applied - 68 -->
+                <div class="grid gap-3 px-4 py-2.5 hover:bg-[#131316] transition-colors cursor-pointer" style="grid-template-columns: 1fr 1fr 80px 44px;">
+                  <div class="flex items-center gap-2 min-w-0">
+                    <div class="w-5 h-5 rounded bg-[#1e1e22] border border-[#26262b] flex items-center justify-center flex-shrink-0">
+                      <span class="text-[7px] font-bold text-[#34d399]">Sh</span>
+                    </div>
+                    <span class="text-[10px] font-medium text-[#f0f0f0] truncate">Shopify</span>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] text-[#a0a0a8] truncate">API Engineer</div>
+                    <div class="flex gap-1 mt-0.5">
+                      <span class="px-1 py-0.5 bg-[#2a1e0e] text-[#fbbf24] text-[7px] rounded font-medium">Ruby</span>
+                      <span class="px-1 py-0.5 bg-[#1a1a2a] text-[#818cf8] text-[7px] rounded font-medium">GraphQL</span>
+                    </div>
+                  </div>
+                  <div><span class="px-2 py-0.5 bg-[#2a1e0e] text-[#f59e0b] text-[8px] rounded-full font-medium">Applied</span></div>
+                  <div class="text-[11px] font-semibold text-[#f0f0f0]">68</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Fade to background -->
-      <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#0f0f0f] to-transparent" aria-hidden="true"></div>
-    </div>
 
+    </div>
   </div>
 </section>

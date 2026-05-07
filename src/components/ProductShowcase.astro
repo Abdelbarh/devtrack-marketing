@@ -1,0 +1,169 @@
+---
+---
+<section class="py-20 px-6 bg-[#0e0e11] border-y border-[#1e1e22]">
+  <div class="max-w-container mx-auto">
+
+    <!-- Section header -->
+    <div class="max-w-2xl mb-12">
+      <div data-animate class="mb-3">
+        <span class="text-xs font-semibold text-[#a3e635] uppercase tracking-widest">Product</span>
+      </div>
+      <h2
+        data-animate
+        data-delay="1"
+        class="text-3xl sm:text-[2.25rem] font-bold text-[#f0f0f0] leading-tight tracking-tight"
+      >
+        One workspace for your entire search.
+      </h2>
+      <p
+        data-animate
+        data-delay="2"
+        class="mt-4 text-[16px] text-[#a0a0a8] leading-relaxed"
+      >
+        From the first job post to the final interview, DevTrack keeps your applications structured, searchable, and actionable.
+      </p>
+    </div>
+
+    <!-- Large product UI mockup -->
+    <div data-animate data-delay="1" class="relative">
+
+      <!-- Outer glow -->
+      <div class="absolute -inset-px rounded-2xl bg-[#a3e635]/5 blur-xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="relative rounded-xl border border-[#26262b] bg-[#0a0a0c] overflow-hidden shadow-mockup">
+
+        <!-- App header -->
+        <div class="flex items-center gap-3 h-10 px-4 bg-[#0a0a0c] border-b border-[#1e1e22]">
+          <div class="flex gap-1.5">
+            <div class="w-2.5 h-2.5 rounded-full bg-[#3a3a3a]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#3a3a3a]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#3a3a3a]"></div>
+          </div>
+          <div class="ml-2 flex-1 h-5 bg-[#131316] rounded border border-[#1e1e22] flex items-center px-2.5 max-w-[280px]">
+            <span class="text-[10px] text-[#5a5a64]">app.devtrack.io/applications</span>
+          </div>
+        </div>
+
+        <!-- Main layout -->
+        <div class="flex" style="min-height: 440px;">
+
+          <!-- Sidebar -->
+          <div class="w-[52px] sm:w-[180px] flex-shrink-0 bg-[#080809] border-r border-[#1e1e22] flex flex-col py-3">
+            <div class="hidden sm:flex items-center gap-2 px-3 mb-5">
+              <div class="w-5 h-5 bg-[#a3e635] rounded-[5px] flex items-center justify-center flex-shrink-0">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0c0c0e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-[11px] font-semibold text-[#f0f0f0]">DevTrack</span>
+            </div>
+
+            <div class="flex flex-col gap-0.5 px-1.5 sm:px-2">
+              {[
+                { icon: `<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>`, label: 'Dashboard', active: false },
+                { icon: `<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>`, label: 'Applications', active: true },
+                { icon: `<path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/>`, label: 'Documents', active: false },
+                { icon: `<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>`, label: 'Reminders', active: false },
+              ].map(item => (
+                <div class={`flex items-center gap-2 px-1.5 sm:px-2 py-1.5 rounded-md text-[10px] sm:text-[11px] cursor-pointer transition-colors ${item.active ? 'bg-[#1a1a1e] text-[#f0f0f0]' : 'text-[#5a5a64] hover:bg-[#131316] hover:text-[#a0a0a8]'}`}>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="flex-shrink-0" aria-hidden="true">
+                    <Fragment set:html={item.icon} />
+                  </svg>
+                  <span class="hidden sm:inline truncate">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Main panel -->
+          <div class="flex-1 overflow-hidden flex flex-col min-w-0">
+
+            <!-- Topbar -->
+            <div class="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-[#1e1e22] flex-shrink-0 gap-4">
+              <h2 class="text-sm font-semibold text-[#f0f0f0]">Applications</h2>
+              <div class="flex items-center gap-2">
+                <div class="hidden sm:flex items-center gap-1.5 bg-[#0a0a0c] border border-[#1e1e22] rounded-md px-3 py-1.5 w-48">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5a5a64" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                  <span class="text-[11px] text-[#3a3a44]">Search roles...</span>
+                </div>
+                <button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#a3e635] hover:bg-[#8bcf2a] text-[#0c0c0e] text-[11px] font-bold rounded-md transition-colors">
+                  <span>+</span><span class="hidden sm:inline">Add application</span><span class="sm:hidden">Add</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Status filter pills -->
+            <div class="flex items-center gap-2 px-4 sm:px-6 py-3 border-b border-[#1e1e22] flex-shrink-0 overflow-x-auto">
+              <span class="px-2.5 py-1 bg-[#a3e635]/10 text-[#a3e635] text-[11px] rounded-full border border-[#a3e635]/20 cursor-pointer whitespace-nowrap font-medium">All (12)</span>
+              <span class="px-2.5 py-1 bg-[#1a1a1e] text-[#a0a0a8] text-[11px] rounded-full border border-[#26262b] cursor-pointer whitespace-nowrap hover:border-[#36363b] transition-colors">Saved (3)</span>
+              <span class="px-2.5 py-1 bg-[#1a1a1e] text-[#a0a0a8] text-[11px] rounded-full border border-[#26262b] cursor-pointer whitespace-nowrap hover:border-[#36363b] transition-colors">Applied (5)</span>
+              <span class="px-2.5 py-1 bg-[#1a1a1e] text-[#a0a0a8] text-[11px] rounded-full border border-[#26262b] cursor-pointer whitespace-nowrap hover:border-[#36363b] transition-colors">Screening (2)</span>
+              <span class="px-2.5 py-1 bg-[#1a1a1e] text-[#a0a0a8] text-[11px] rounded-full border border-[#26262b] cursor-pointer whitespace-nowrap hover:border-[#36363b] transition-colors">Interview (1)</span>
+              <span class="px-2.5 py-1 bg-[#1a1a1e] text-[#a0a0a8] text-[11px] rounded-full border border-[#26262b] cursor-pointer whitespace-nowrap hover:border-[#36363b] transition-colors">Offer (1)</span>
+            </div>
+
+            <!-- Table header -->
+            <div class="hidden sm:grid gap-4 px-6 py-2.5 border-b border-[#1e1e22] bg-[#0a0a0c] flex-shrink-0" style="grid-template-columns: 1.2fr 1.5fr 100px 64px 80px;">
+              <span class="text-[10px] font-semibold text-[#5a5a64] uppercase tracking-wide">Company</span>
+              <span class="text-[10px] font-semibold text-[#5a5a64] uppercase tracking-wide">Role</span>
+              <span class="text-[10px] font-semibold text-[#5a5a64] uppercase tracking-wide">Status</span>
+              <span class="text-[10px] font-semibold text-[#5a5a64] uppercase tracking-wide">Score</span>
+              <span class="text-[10px] font-semibold text-[#5a5a64] uppercase tracking-wide">Applied</span>
+            </div>
+
+            <!-- Rows -->
+            <div class="flex-1 overflow-auto divide-y divide-[#1a1a1a]">
+
+              {[
+                { co: 'Stripe', coColor: '#818cf8', role: 'Backend Engineer III', tags: ['Python', 'FastAPI', 'PostgreSQL'], tagColors: ['#a3e635', '#818cf8', '#34d399'], status: 'Applied', statusBg: 'bg-[#2a1e0e]', statusText: 'text-[#f59e0b]', score: 87, scoreColor: 'text-[#a3e635]', date: '2w ago' },
+                { co: 'Vercel', coColor: '#f0f0f0', role: 'Full Stack Developer', tags: ['React', 'Next.js', 'C#'], tagColors: ['#38bdf8', '#a0a0a8', '#818cf8'], status: 'Saved', statusBg: 'bg-[#1e1e22]', statusText: 'text-[#a0a0a8]', score: 72, scoreColor: 'text-[#fbbf24]', date: '3d ago' },
+                { co: 'Datadog', coColor: '#f97316', role: 'Senior Software Engineer', tags: ['Go', 'Python', 'PostgreSQL'], tagColors: ['#34d399', '#a3e635', '#34d399'], status: 'Screening', statusBg: 'bg-[#2a1a0e]', statusText: 'text-[#f97316]', score: 91, scoreColor: 'text-[#a3e635]', date: '1w ago' },
+                { co: 'Linear', coColor: '#818cf8', role: 'Backend Developer', tags: ['TypeScript', '.NET', 'React'], tagColors: ['#818cf8', '#34d399', '#38bdf8'], status: 'Interview', statusBg: 'bg-[#1a1a2a]', statusText: 'text-[#818cf8]', score: 95, scoreColor: 'text-[#a3e635]', date: '5d ago' },
+                { co: 'Shopify', coColor: '#34d399', role: 'API Engineer', tags: ['Ruby', 'GraphQL', 'PostgreSQL'], tagColors: ['#f87171', '#f59e0b', '#34d399'], status: 'Applied', statusBg: 'bg-[#2a1e0e]', statusText: 'text-[#f59e0b]', score: 68, scoreColor: 'text-[#f0f0f0]', date: '4d ago' },
+                { co: 'GitHub', coColor: '#f0f0f0', role: 'Software Engineer, Copilot', tags: ['Python', 'FastAPI', 'C#'], tagColors: ['#a3e635', '#818cf8', '#818cf8'], status: 'Offer', statusBg: 'bg-[#0e1a0e]', statusText: 'text-[#a3e635]', score: 89, scoreColor: 'text-[#a3e635]', date: '3w ago' },
+              ].map(row => (
+                <div class="grid gap-4 px-4 sm:px-6 py-3 hover:bg-[#131316] transition-colors cursor-pointer" style="grid-template-columns: auto 1fr;">
+                  <!-- Mobile: stacked -->
+                  <div class="sm:hidden col-span-2 flex items-start gap-3">
+                    <div class="w-7 h-7 rounded-md bg-[#1e1e22] border border-[#26262b] flex items-center justify-center flex-shrink-0">
+                      <span class={`text-[9px] font-bold`} style={`color: ${row.coColor}`}>{row.co.slice(0,2)}</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center justify-between gap-2">
+                        <span class="text-[12px] font-semibold text-[#f0f0f0] truncate">{row.co}</span>
+                        <span class={`px-2 py-0.5 ${row.statusBg} ${row.statusText} text-[9px] rounded-full font-medium flex-shrink-0`}>{row.status}</span>
+                      </div>
+                      <div class="text-[11px] text-[#a0a0a8] truncate mt-0.5">{row.role}</div>
+                    </div>
+                  </div>
+
+                  <!-- Desktop: grid columns -->
+                  <div class="hidden sm:grid gap-4 col-span-2" style="grid-template-columns: 1.2fr 1.5fr 100px 64px 80px;">
+                    <div class="flex items-center gap-2.5 min-w-0">
+                      <div class="w-6 h-6 rounded-md bg-[#1e1e22] border border-[#26262b] flex items-center justify-center flex-shrink-0">
+                        <span class="text-[8px] font-bold" style={`color: ${row.coColor}`}>{row.co.slice(0,2)}</span>
+                      </div>
+                      <span class="text-[12px] font-medium text-[#f0f0f0] truncate">{row.co}</span>
+                    </div>
+                    <div class="min-w-0">
+                      <div class="text-[12px] text-[#a0a0a8] truncate">{row.role}</div>
+                      <div class="flex gap-1 mt-1 flex-wrap">
+                        {row.tags.map((tag, ti) => (
+                          <span class="px-1.5 py-0.5 text-[8px] rounded font-medium" style={`color: ${row.tagColors[ti]}; background: ${row.tagColors[ti]}18`}>{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <span class={`px-2 py-0.5 ${row.statusBg} ${row.statusText} text-[9px] rounded-full font-medium`}>{row.status}</span>
+                    </div>
+                    <div class={`flex items-center text-[13px] font-bold ${row.scoreColor}`}>{row.score}</div>
+                    <div class="flex items-center text-[11px] text-[#5a5a64]">{row.date}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

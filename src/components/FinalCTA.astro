@@ -1,39 +1,61 @@
 ---
 ---
-<section class="py-28 px-5 sm:px-8 border-t border-[#1a1a1a]">
-  <div class="max-w-5xl mx-auto">
+<section class="py-24 px-6">
+  <div class="max-w-container mx-auto">
 
-    <h2
-      data-animate
-      class="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F5F0E8] leading-[1.08] tracking-tight max-w-2xl"
-    >
-      Your next application<br/>takes 5 minutes.<br/>
-      <span class="text-[#C8A96E]">Not 40.</span>
-    </h2>
+    <div class="relative rounded-2xl border border-[#26262b] bg-[#131316] overflow-hidden px-8 sm:px-16 py-16 sm:py-20 text-center">
 
-    <p
-      data-animate
-      data-delay="150"
-      class="mt-6 text-[#525252] text-base max-w-xs"
-    >
-      DevTrack is free to start. No credit card required.
-    </p>
+      <!-- Radial highlight -->
+      <div
+        class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] opacity-40"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 60% at 50% 0%, rgba(163,230,53,0.1) 0%, transparent 70%);"
+      ></div>
 
-    <div
-      data-animate
-      data-delay="300"
-      class="mt-8"
-    >
-      <a
-        href="#"
-        class="inline-flex items-center gap-2 px-7 py-3.5 bg-[#F5F0E8] hover:bg-white text-[#0f0f0f] font-medium rounded-md transition-colors duration-150 text-sm"
+      <div data-animate class="mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0e1a0e] border border-[#a3e635]/20 rounded-full text-xs font-medium text-[#a3e635]">
+          Free to start. No credit card required.
+        </span>
+      </div>
+
+      <h2
+        data-animate
+        data-delay="1"
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#f0f0f0] leading-tight tracking-tight max-w-2xl mx-auto"
       >
-        Get started free
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </a>
-    </div>
+        Your next application should feel organized.
+      </h2>
 
+      <p
+        data-animate
+        data-delay="2"
+        class="mt-5 text-[16px] sm:text-[17px] text-[#a0a0a8] max-w-lg mx-auto leading-relaxed"
+      >
+        Start with one job description. DevTrack turns it into a structured application workflow.
+      </p>
+
+      <div
+        data-animate
+        data-delay="3"
+        class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3"
+      >
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#a3e635] hover:bg-[#8bcf2a] text-[#0c0c0e] font-semibold text-sm rounded-lg transition-colors duration-150 w-full sm:w-auto justify-center"
+        >
+          Start free
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#1a1a1e] hover:bg-[#222226] border border-[#36363b] text-[#f0f0f0] text-sm font-medium rounded-lg transition-all duration-150 w-full sm:w-auto justify-center"
+        >
+          See how it works
+        </a>
+      </div>
+
+    </div>
   </div>
 </section>

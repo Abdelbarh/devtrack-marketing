@@ -1,120 +1,138 @@
 ---
-const freeFeatures = [
-  'Up to 3 tracked applications',
-  'Manual pipeline tracking',
-  'No AI features',
-];
+const freePlan = {
+  name: 'Free',
+  price: '€0',
+  subtitle: 'For getting started',
+  cta: 'Start free',
+  features: [
+    'Track up to 50 applications',
+    'Basic JD parsing',
+    'Basic match scoring',
+    'Pipeline tracking',
+    'Follow-up reminders',
+  ],
+};
 
-const proFeatures = [
-  'Unlimited applications',
-  'AI JD parsing on every job',
-  'Match scoring against your profile',
-  'Resume generation + PDF export',
-  'Cover letter generation',
-  'Automated follow-up reminder emails',
-  'Priority support',
-];
+const proPlan = {
+  name: 'Pro',
+  price: '€12',
+  period: '/ month',
+  subtitle: 'For serious job seekers',
+  cta: 'Upgrade to Pro',
+  features: [
+    'Unlimited applications',
+    'Advanced match insights',
+    'Resume tailoring',
+    'Cover letter generation',
+    'Priority support',
+  ],
+};
 ---
-<section id="pricing" class="py-24 px-5 sm:px-8 border-t border-[#1a1a1a]">
-  <div class="max-w-4xl mx-auto">
+<section id="pricing" class="py-20 px-6">
+  <div class="max-w-container mx-auto">
 
-    <p data-animate class="text-sm text-[#525252] mb-5">pricing</p>
+    <div class="text-center mb-12">
+      <div data-animate class="mb-3">
+        <span class="text-xs font-semibold text-[#a3e635] uppercase tracking-widest">Pricing</span>
+      </div>
+      <h2
+        data-animate
+        data-delay="1"
+        class="text-3xl sm:text-[2.25rem] font-bold text-[#f0f0f0] leading-tight tracking-tight"
+      >
+        Start free. Upgrade when it matters.
+      </h2>
+      <p
+        data-animate
+        data-delay="2"
+        class="mt-4 text-[16px] text-[#a0a0a8] max-w-md mx-auto"
+      >
+        No lock-in. Cancel or downgrade whenever you like.
+      </p>
+    </div>
 
-    <h2
-      data-animate
-      data-delay="100"
-      class="font-serif text-3xl sm:text-4xl text-[#F5F0E8] leading-tight"
-    >
-      One price. No tricks.
-    </h2>
+    <div class="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
 
-    <p
-      data-animate
-      data-delay="200"
-      class="mt-4 text-[#525252] max-w-sm text-sm"
-    >
-      Start free. Upgrade when you're getting real value. €12/month is less than a tech book.
-    </p>
-
-    <!-- Pricing cards -->
-    <div
-      data-stagger
-      class="mt-12 grid sm:grid-cols-2 gap-5"
-    >
-
-      <!-- Free -->
+      <!-- Free plan -->
       <div
         data-animate
-        class="flex flex-col p-7 bg-[#0f0f0f] border border-[#222] rounded-lg"
+        class="flex flex-col p-7 bg-[#131316] border border-[#26262b] rounded-xl"
       >
-        <div>
-          <p class="text-xs text-[#525252] uppercase tracking-wide mb-3">Free</p>
+        <div class="mb-6">
+          <p class="text-sm font-semibold text-[#a0a0a8] mb-3">{freePlan.name}</p>
           <div class="flex items-end gap-1.5">
-            <span class="text-4xl font-serif text-[#F5F0E8]">€0</span>
-            <span class="text-[#383838] text-sm mb-0.5">/ forever</span>
+            <span class="text-4xl font-bold text-[#f0f0f0] leading-none">{freePlan.price}</span>
+            <span class="text-sm text-[#5a5a64] pb-0.5">forever</span>
           </div>
+          <p class="text-sm text-[#5a5a64] mt-1.5">{freePlan.subtitle}</p>
         </div>
 
-        <ul class="mt-8 flex-1 flex flex-col gap-3.5">
-          {freeFeatures.map((f) => (
-            <li class="flex items-start gap-3 text-sm text-[#525252]">
-              <span class="mt-1 w-1 h-1 rounded-full bg-[#383838] flex-shrink-0"></span>
+        <ul class="flex-1 flex flex-col gap-3 mb-7">
+          {freePlan.features.map(f => (
+            <li class="flex items-start gap-3 text-sm text-[#a0a0a8]">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5a5a64" stroke-width="2.5" stroke-linecap="round" class="mt-0.5 flex-shrink-0" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               {f}
             </li>
           ))}
         </ul>
 
-        <div class="mt-8">
-          <a
-            href="#"
-            class="w-full block text-center px-5 py-2.5 border border-[#222] hover:border-[#333] text-[#525252] hover:text-[#737373] text-sm rounded-md transition-colors duration-150"
-          >
-            Get started free
-          </a>
-        </div>
+        <a
+          href="#"
+          class="block text-center px-5 py-3 bg-[#1a1a1e] hover:bg-[#222226] border border-[#36363b] hover:border-[#46464b] text-[#f0f0f0] text-sm font-semibold rounded-lg transition-all duration-150"
+        >
+          {freePlan.cta}
+        </a>
       </div>
 
-      <!-- Pro -->
+      <!-- Pro plan (highlighted) -->
       <div
         data-animate
-        data-delay="100"
-        class="flex flex-col p-7 bg-[#0f0f0f] border border-[#F5F0E8]/15 rounded-lg"
+        data-delay="1"
+        class="flex flex-col p-7 bg-[#131316] border border-[#a3e635]/30 rounded-xl relative overflow-hidden"
+        style="box-shadow: 0 0 0 1px rgba(163,230,53,0.08), 0 8px 32px rgba(163,230,53,0.06);"
       >
-        <div>
-          <p class="text-xs text-[#9a9a9a] uppercase tracking-wide mb-3">Pro</p>
-          <div class="flex items-end gap-1.5">
-            <span class="text-4xl font-serif text-[#F5F0E8]">€12</span>
-            <span class="text-[#383838] text-sm mb-0.5">/ month</span>
-          </div>
+        <!-- Subtle lime tint at top -->
+        <div class="absolute top-0 left-0 right-0 h-px bg-[#a3e635]/40" aria-hidden="true"></div>
+
+        <!-- Popular badge -->
+        <div class="absolute top-5 right-5">
+          <span class="px-2.5 py-1 bg-[#a3e635]/10 border border-[#a3e635]/20 text-[#a3e635] text-[10px] font-semibold rounded-full uppercase tracking-wide">
+            Popular
+          </span>
         </div>
 
-        <ul class="mt-8 flex-1 flex flex-col gap-3.5">
-          {proFeatures.map((f) => (
-            <li class="flex items-start gap-3 text-sm text-[#737373]">
-              <span class="mt-1 w-1 h-1 rounded-full bg-[#C8A96E]/60 flex-shrink-0"></span>
+        <div class="mb-6">
+          <p class="text-sm font-semibold text-[#a3e635] mb-3">{proPlan.name}</p>
+          <div class="flex items-end gap-1.5">
+            <span class="text-4xl font-bold text-[#f0f0f0] leading-none">{proPlan.price}</span>
+            <span class="text-sm text-[#5a5a64] pb-0.5">{proPlan.period}</span>
+          </div>
+          <p class="text-sm text-[#5a5a64] mt-1.5">{proPlan.subtitle}</p>
+        </div>
+
+        <ul class="flex-1 flex flex-col gap-3 mb-7">
+          {proPlan.features.map(f => (
+            <li class="flex items-start gap-3 text-sm text-[#a0a0a8]">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2.5" stroke-linecap="round" class="mt-0.5 flex-shrink-0" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               {f}
             </li>
           ))}
         </ul>
 
-        <div class="mt-8">
-          <a
-            href="#"
-            class="w-full block text-center px-5 py-2.5 bg-[#F5F0E8] hover:bg-white text-[#0f0f0f] text-sm font-medium rounded-md transition-colors duration-150"
-          >
-            Start Pro
-          </a>
-        </div>
+        <a
+          href="#"
+          class="block text-center px-5 py-3 bg-[#a3e635] hover:bg-[#8bcf2a] text-[#0c0c0e] text-sm font-semibold rounded-lg transition-colors duration-150"
+        >
+          {proPlan.cta}
+        </a>
       </div>
-
     </div>
 
     <p
       data-animate
-      data-delay="200"
-      class="mt-7 text-xs text-[#383838]"
+      class="mt-8 text-center text-xs text-[#5a5a64]"
     >
-      No trial period tricks. Free tier is genuinely free. Cancel Pro anytime — no retention email, no "are you sure?" dialogs.
+      No credit card required to start. Cancel Pro anytime.
     </p>
 
   </div>
