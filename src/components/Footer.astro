@@ -1,7 +1,7 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-[#1e1e22] bg-[#080809] px-6 pt-12 pb-8">
+<footer class="border-t border-[#1A1E32] bg-[#07090F] px-6 pt-12 pb-8">
   <div class="max-w-container mx-auto">
 
     <div class="grid sm:grid-cols-[1fr_auto_auto] gap-10 sm:gap-16 mb-10">
@@ -10,39 +10,42 @@ const year = new Date().getFullYear();
       <div class="max-w-xs">
         <a href="/" class="flex items-center gap-2.5 mb-3 group w-fit">
           <img src="/logos/devtrack-mark.svg" alt="DevTrack" class="w-7 h-7" />
-          <span class="font-semibold text-[#f0f0f0] text-[15px] tracking-tight">DevTrack</span>
+          <span class="font-display font-semibold text-[#E8EEFF] text-[15px]">DevTrack</span>
         </a>
-        <p class="text-sm text-[#5a5a64] leading-relaxed">
-          A developer-first job search workspace.
+        <p class="text-sm text-[#3D4468] leading-relaxed">
+          A developer-first job search workspace. Built with privacy by design.
         </p>
       </div>
 
       <!-- Product links -->
       <div>
-        <p class="text-xs font-semibold text-[#f0f0f0] uppercase tracking-wider mb-4">Product</p>
+        <p class="text-xs font-semibold text-[#C7CBF0] uppercase tracking-wider mb-4">Product</p>
         <ul class="flex flex-col gap-2.5">
-          <li><a href="#features" class="text-sm text-[#5a5a64] hover:text-[#a0a0a8] transition-colors">Features</a></li>
-          <li><a href="#how-it-works" class="text-sm text-[#5a5a64] hover:text-[#a0a0a8] transition-colors">How it works</a></li>
-          <li><a href="#pricing" class="text-sm text-[#5a5a64] hover:text-[#a0a0a8] transition-colors">Pricing</a></li>
+          <li><a href="#features" class="text-sm text-[#3D4468] hover:text-[#7B82AF] transition-colors">Features</a></li>
+          <li><a href="#how-it-works" class="text-sm text-[#3D4468] hover:text-[#7B82AF] transition-colors">How it works</a></li>
+          <li><a href="#pricing" class="text-sm text-[#3D4468] hover:text-[#7B82AF] transition-colors">Pricing</a></li>
+          <li><a href="#faq" class="text-sm text-[#3D4468] hover:text-[#7B82AF] transition-colors">FAQ</a></li>
         </ul>
       </div>
 
       <!-- Legal links -->
       <div>
-        <p class="text-xs font-semibold text-[#f0f0f0] uppercase tracking-wider mb-4">Legal</p>
+        <p class="text-xs font-semibold text-[#C7CBF0] uppercase tracking-wider mb-4">Legal</p>
         <ul class="flex flex-col gap-2.5">
-          <li><a href="/privacy" class="text-sm text-[#5a5a64] hover:text-[#a0a0a8] transition-colors">Privacy Policy</a></li>
-          <li><a href="/terms" class="text-sm text-[#5a5a64] hover:text-[#a0a0a8] transition-colors">Terms of Service</a></li>
+          <li><a href="/privacy" class="text-sm text-[#3D4468] hover:text-[#7B82AF] transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms" class="text-sm text-[#3D4468] hover:text-[#7B82AF] transition-colors">Terms of Service</a></li>
+          <li><a href="mailto:privacy@devtrack.app" class="text-sm text-[#3D4468] hover:text-[#7B82AF] transition-colors">Data requests</a></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom bar -->
-    <div class="pt-6 border-t border-[#1a1a1c] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-      <p class="text-xs text-[#3a3a44]">© {year} DevTrack. All rights reserved.</p>
-      <a href="mailto:hello@devtrack.app" class="text-xs text-[#3a3a44] hover:text-[#5a5a64] transition-colors">
-        hello@devtrack.app
-      </a>
+    <div class="pt-6 border-t border-[#131828] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <p class="text-xs text-[#2A3050]">© {year} DevTrack. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <span class="text-xs text-[#2A3050]">Your data stays yours.</span>
+        <a href="mailto:hello@devtrack.app" class="text-xs text-[#2A3050] hover:text-[#4A5080] transition-colors">hello@devtrack.app</a>
+      </div>
     </div>
 
   </div>
